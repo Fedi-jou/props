@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Comp from "./Profile/comp.js";
+import picture from "./Images/img.jpg";
 
 function App() {
+  const inlinestyle = {
+    color : "red",
+    textAlign: "center",
+    fontFamily: "Times New Roman",
+    outlineStyle: "groove",
+    outlineColor: "black"
+  }
+  const imgstyle = { 
+      border: "1px solid #ddd",
+      borderRadius: "4px" ,
+      padding: "5px" ,
+      width: "550px"
+    }
+    function handleName(name){
+      alert(name)
+         }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={inlinestyle} className="App">
+      <Comp name="Fedi" bio="Go my code student" prof=" reactjs devoloper" handle={handleName} > <img style={imgstyle} src={picture} alt=""></img> </Comp>
+      
     </div>
   );
 }
